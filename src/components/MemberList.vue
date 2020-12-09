@@ -8,7 +8,7 @@
                         <h3>
                             {{member.name}}
                         </h3>
-                        <img :str="member.logo" :alt="'logo '+member.name"> 
+                        <img class="logo" :src="member.logo" :alt="'logo '+member.name"> 
                     </button>
                 </li>
             </ul>
@@ -29,13 +29,11 @@ interface Member {
     images: string[];
 }
 
-
-
 export default class MemberList extends Vue {
     public members: Member[]=[
         {
             name:'twentio',
-            logo: require('@/assets/logo.svg'),
+            logo: require('@/assets/twentio.svg'),
             summary:'',
             description:'',
             contactPlace:'',
@@ -100,6 +98,9 @@ export default class MemberList extends Vue {
                       border: none;
                       cursor: pointer;
                       border: 1px solid #000;
+                      .logo{
+                          width: 100px;
+                      }
                   }
               }
           }
