@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 $defaultShadow: 0 2px 2px rgba(0, 0, 0, .25);
-$primaryColor: #0c57fb;
-$secondaryColor: #0b3ead;
+$primaryColor: #212121;
+$secondaryColor: #e10b0b;
 
 *,
 :after,
@@ -14,13 +13,8 @@ $secondaryColor: #0b3ead;
 
 body {
     margin: 0;
-    font-family: 'Raleway', sans-serif;
-    background: #fff;
-    /*background: #f7f7f7;*/
-}
-
-a {
-    color: $primaryColor;
+    font-family: 'Hammersmith One', sans-serif;
+    background: #f7f7f7;
 }
 
 .container {
@@ -36,11 +30,11 @@ a {
     }
 
     @media (min-width: 768px) {
-        max-width: 920px;
+        max-width: 720px;
     }
 
     @media (min-width: 1296px) {
-        max-width: 90%;
+        max-width: 80%;
         padding: 0;
     }
 }

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="logo">
         <router-link to="/">
-          <img src="" />
+          <img src="../assets/logo.svg" />
         </router-link>
       </div>
       <ul>
@@ -12,6 +12,9 @@
         </li>
         <li>
           <router-link to="/o-nas">o nás</router-link>
+        </li>
+         <li>
+          <router-link to="/clenove">členové</router-link>
         </li>
       </ul>
     </div>
@@ -64,6 +67,7 @@ nav {
         align-items: center;
         &:focus {
           outline-style: dotted;
+          outline-color: #212121;
         }
 
         img {
@@ -87,7 +91,7 @@ nav {
         a {
           height: 100%;
           padding: 0 0.75rem;
-          color: #49546d;
+          color: #6e6e6e;
           position: relative;
           text-decoration: none;
           display: flex;
@@ -101,7 +105,7 @@ nav {
             }
           }
           &.router-link-active {
-            color: #0b3ead;
+            color: #212121;
             &:after {
               width: 32px;
               height: 1px;
@@ -111,11 +115,11 @@ nav {
               position: absolute;
               display: block;
               content: "";
-              background-color: #00c5f9;
+              background-color: #e10b0b;
             }
           }
           &:hover {
-            color: #0b3ead;
+            color: #212121;
             &:after {
               width: 32px;
               height: 1px;
@@ -125,7 +129,7 @@ nav {
               position: absolute;
               display: block;
               content: "";
-              background-color: #00c5f9;
+              background-color: #e10b0b;
             }
           }
         }

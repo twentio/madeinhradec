@@ -1,5 +1,6 @@
 <template>
   <Menu />
+  <h1>Členové</h1>
   <Footer />
 </template>
 
@@ -14,5 +15,5 @@ import Footer from "@/components/Footer.vue"; // @ is an alias to /src
     Footer
   },
 })
-export default class Home extends Vue {}
+export default class Members extends Vue {}
 </script>
