@@ -1,24 +1,6 @@
 # madeinhradec
 
-## Project setup
-```
-npm install
-```
+Chceme spojovat, poznávat a propagovat, jak splek, tak i jednotlivé firmy v Hradci Králové. Zajímavé projekty pod značkou "Made in Hradec".
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Vytvořilo twentio.cz
+poslední změna 09/12/2020
