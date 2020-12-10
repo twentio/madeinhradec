@@ -45,9 +45,9 @@
               <p>
                 {{ detailMember.contactPlace }}
               </p>
-              <p v-for="phone in detailMember.contactPhone" v-bind:key="phone">
+              <a v-for="phone in detailMember.contactPhone" v-bind:key="phone" :href="'tel:'+removeWhiteSpace(phone)"><br>
                 {{ phone }}
-              </p>
+              </a>
               <p v-for="email in detailMember.contactEmail" v-bind:key="email">
                 {{ email }}
               </p>
@@ -153,6 +153,9 @@ export default class MemberList extends Vue {
   }
   showDetail() {
     this.openDetail = !this.openDetail;
+  }
+  removeWhiteSpace(data: string) {
+      return data.replace(/ /g,'');
   }
 }
 </script>

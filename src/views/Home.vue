@@ -1,10 +1,10 @@
 <template>
   <Menu />
-  <!---<div class="info">
-    <h1>Stránka je aktuálně ve výstavbě</h1>
-  </div>-->
   <div class="banner"></div>
   <Benefits />
+  <div class="info">
+    <h1>Stránka je aktuálně ve výstavbě</h1>
+  </div>
   <Footer />
 </template>
 
@@ -27,7 +27,7 @@ export default class Home extends Vue {}
 <style lang="scss" scoped>
 .info {
   width: 100%;
-  height: calc(100vh - 80px - 32px - 126.4px);
+  height: 400px;
   position: relative;
   display: flex;
   align-items: center;
