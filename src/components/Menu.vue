@@ -13,8 +13,11 @@
         <li>
           <router-link to="/o-nas">o nás</router-link>
         </li>
-         <li>
+        <li>
           <router-link to="/clenove">členové</router-link>
+        </li>
+        <li class="eshop">
+          <a disabled="disabled" to="/">eshop</a>
         </li>
       </ul>
     </div>
@@ -89,6 +92,7 @@ nav {
         list-style: none;
         position: relative;
         a {
+          cursor: pointer;
           height: 100%;
           padding: 0 0.75rem;
           color: #6e6e6e;
