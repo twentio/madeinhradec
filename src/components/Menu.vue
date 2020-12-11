@@ -17,7 +17,7 @@
           <router-link to="/clenove">členové</router-link>
         </li>
         <li class="eshop">
-          <a disabled="disabled" to="/">eshop</a>
+          <router-link to="/">eshop</router-link>
         </li>
       </ul>
     </div>
