@@ -34,12 +34,34 @@ export default class Home extends Vue {}
   justify-content: center;
 }
 .banner {
-  background: url("../assets/grow-banner.jpg");
+  background: url("../assets/images/bg.jpg");
+  overflow: hidden;
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: -2rem 0 2rem 0;
   width: 100%;
   height: 400px;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("../assets/images/grow-main.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-width: 1536px) {
+      background-size: 620px;
+    }
+    @media (max-width: 1536px) {
+      background-size: 80%;
+    }
+    @media (max-width: 576px) {
+      background-size: 95%;
+    }
+  }
 }
 </style>

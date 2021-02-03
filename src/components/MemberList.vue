@@ -45,7 +45,11 @@
               <p>
                 {{ detailMember.contactPlace }}
               </p>
-              <a v-for="phone in detailMember.contactPhone" v-bind:key="phone" :href="'tel:'+phone.replace(/ /g,'')"><br>
+              <a
+                v-for="phone in detailMember.contactPhone"
+                v-bind:key="phone"
+                :href="'tel:' + phone.replace(/ /g, '')"
+                ><br />
                 {{ phone }}
               </a>
               <p v-for="email in detailMember.contactEmail" v-bind:key="email">
@@ -105,45 +109,37 @@ export default class MemberList extends Vue {
     {
       name: "Plenkylevne.cz",
       logo: require("@/assets/plenkylevne.svg"),
-      summary:
-        "Maloobchodní prodej potřeb pro děti.",
+      summary: "Maloobchodní prodej potřeb pro děti.",
       description:
         "Nabízíme široký sortiment značkových plenek a dalšího sortimentu pro vaše nejmenší. Zboží máme skladem a odesíláme ho ihned, můžete ho mít tedy u sebe již druhý den.",
       contactPlace: "",
       contactPhone: ["+420 728 480 882"],
-      contactEmail: [
-        "info@plenkylevne.cz",
-      ],
+      contactEmail: ["info@plenkylevne.cz"],
       images: [],
       url: "https://plenkylevne.cz",
     },
     {
       name: "itebo.cz",
       logo: require("@/assets/itebo.png"),
-      summary:
-        "Maloobchodní prodej drogerie.",
+      summary: "Maloobchodní prodej drogerie.",
       description:
         "Potřebujete barvy, laky, kosmetiku nebo drogerii? Navštivte naši prodejnu v Hradci Králové. Nabízíme Vám barvy, laky, drogerii a kosmetiku v naší prodejně v Hradci Králové. V naší nabídce máme: - barvy Denas, Eternal, Remal, Het, Luxol - ředidla a rozpouštědla - peroxid 30% - kyselina solná - štětce a válečky - sádra a tmely - zakrývací folie a pásky - penetrace - dětské plenky DADA a NAPPY - pohlcovače vlhkosti a náplně - žárovky a baterie - prodlužovací kabely - teploměry - dioptrické čtecí brýle - potravinářské barvy - kosmetiku Bione cosmetics, Regina, Ryor, Bohemia cosmetics, Joanna BI-ES, Alpa a jiné. - česká drogerie Star, Cit, Savo, Real a jiné - houbičky, hadry, drátěnky - kbelíky Zboží je možno platit hotově nebo kartou.",
       contactPlace: "Pospíšilova 1155/33, 500 03 Hradec Králové",
       contactPhone: ["+420 728 480 882"],
-      contactEmail: [
-        "obchod@itebo.cz",
-      ],
+      contactEmail: ["obchod@itebo.cz"],
       images: [],
       url: "https://itebo.cz",
     },
-      {
+    {
       name: "madeinhradec.cz",
-      logo:  require("@/assets/logo.svg"),
+      logo: require("@/assets/logo.svg"),
       summary:
         "Chceme spojovat, poznávat a propagovat jednotlivé firmy a podnikatele v Hradci Králové. Zajímavé projekty pod značkou ‒ Made in Hradec.",
       description:
         "Chceme spojovat, poznávat a propagovat jednotlivé firmy a podnikatele v Hradci Králové. Zajímavé projekty pod značkou ‒ Made in Hradec.",
       contactPlace: "",
       contactPhone: ["+420 732 365 044"],
-      contactEmail: [
-        "jsme@twentio.cz",
-      ],
+      contactEmail: ["jsme@twentio.cz"],
       images: [],
       url: "https://twentio.cz",
     },
@@ -168,13 +164,19 @@ export default class MemberList extends Vue {
         width: 100%;
         position: relative;
         list-style: none;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 0.75rem;
+
+        @media (max-width: 992px) {
+          grid-template-columns: repeat(8, 1fr);
+        }
+        @media (max-width: 440px) {
+          grid-template-columns: repeat(4, 1fr);
+        }
         li {
+          grid-column-end: span 4;
           margin-bottom: 0.75rem;
-          width: calc((100% / 3) - 0.5rem);
           position: relative;
           button {
             width: 100%;
